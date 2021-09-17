@@ -44,7 +44,31 @@ Ved å legge inn eget e-post i value i stede for den som lå der orginalt
 curl -A "61c08546b939" -e "https://www.nsa.gov/" http://129.241.200.165:19680/index.php?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c
 ```
 
-# Flag04
+# Flag04 - Survey
+```
+http://129.241.200.165:19680/?page=survey
+<form action="#" method="post">
+					<input type="hidden" name="sujet" value="2">
+					<select name="valeur" onchange="javascript:this.form.submit();">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="999999">10</option>
+					</select>
+				</form>
+
+```
+Change the value of one of the Grades
+
+2^Grade mod p = FLAG03 mod 2^64,
+Where
+p = Next_Prime(2^54)
 
 # Flag05
 
