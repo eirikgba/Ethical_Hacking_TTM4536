@@ -31,10 +31,11 @@ Etter det kjørte jeg det default scriptet med noen små justeringer og fikk ut 
 # Flag02 - Passord recovery
 Editerte html coden:
 Ved å legge inn eget e-post i value i stede for den som lå der orginalt
+`
 <form action="#" method="POST">
 	<input type="hidden" name="mail" value="eirikgba@stud.ntnu.no" maxlength="15">
 	<input type="submit" name="Submit" value="Submit">
 </form>
-
+`
 
 
