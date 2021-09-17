@@ -43,5 +43,5 @@ Ved å legge inn eget e-post i value i stede for den som lå der orginalt
 ``` 
 curl -A "61c08546b939" -e "https://www.nsa.gov/" http://129.241.200.165:19680/index.php?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c
 ```
-`curl -A "61c08546b939" -e "https://www.nsa.gov/" http://129.241.200.165:19680/index.php?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c`
+
 
