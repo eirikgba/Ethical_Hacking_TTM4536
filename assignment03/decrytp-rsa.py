@@ -1,7 +1,4 @@
-#2d2762062e20ffffa72e58a8ac86b493.pem
-#92d3928a04087cba76bf91161f7a3e73.pem
-#553a135f2c10f104b5a8d57f7cb5f3dd.pem
-#ecdca7da6ad51315a0324ee68353d8b3.pem
+
 import math
 import os, sys, Crypto
 from Crypto.PublicKey import RSA
@@ -15,9 +12,12 @@ from gmpy2 import mpz,mpq,mpfr,mpc
 from decimal import *
 #import math
 
-
+#2d2762062e20ffffa72e58a8ac86b493.pem       #found match
+#92d3928a04087cba76bf91161f7a3e73.pem       #found match
+#553a135f2c10f104b5a8d57f7cb5f3dd.pem       #found match
+#ecdca7da6ad51315a0324ee68353d8b3.pem       #found match
 # Read you PEM files
-filename = "2d2762062e20ffffa72e58a8ac86b493"                               #write inn the name of the .pem file
+filename = "553a135f2c10f104b5a8d57f7cb5f3dd"                               #write inn the name of the .pem file
 recipient_key = RSA.importKey(open(filename + ".pem").read())
 n = recipient_key.n
 e = recipient_key.e
@@ -28,8 +28,8 @@ print("e: ",e)
 #d=1
 #b=1
 
-d = mod_inverse(n, e)
-print("d: ", d)
+#d = mod_inverse(n, e)
+#print("d: ", d)
 
 #x = Symbol('x')
 #b = solve((e * d) % x == 1, x)
@@ -44,22 +44,23 @@ print("d: ", d)
 # you need to find the corresponding values for d, p and q
 # then you need to construct a new complete RSA key with
 
-test = 125 // 5
-print(test)
+#test = 125 // 5
+#print(test)
 #print(list(primerange(2**1023, 2**1024)))
 
-print("d:  ", d)
+#print("d:  ", d)
 
 p = prevprime(nthroot(n,3))
 # lage en if loop som går til den finner en prime som er delelig med n og gir en prime
 print("p: ",p)
 #n=125
 #p=5
-while not (isprime(n//p)):
+while not ((isprime(n//p)) & (p*(n//p) ==n) ):
     p = prevprime(p)
-    print("new p:", p)
 
-print("ferdig med while")
+print("new p:", p)
+
+#print("ferdig med while")
 
 q = n//p
 print("q: ",q)
@@ -130,16 +131,17 @@ cipher_rsa = PKCS1_OAEP.new(newkey)
 
 ###############################################################################################################
 #BIN -Files
-#063e965fcd26152888ee373dca2b133e.bin
-#084c8fd55f8740665aacb7b70d0f9a4c.bin
-#77580531f75476b810cd268abaa2b5e8.bin
-#d091feff5489487de36fa5089c2c4116.bin
+#063e965fcd26152888ee373dca2b133e.bin           #funnet decryptering - 553a135f2c10f104b5a8d57f7cb5f3dd.pem
+#084c8fd55f8740665aacb7b70d0f9a4c.bin           #funnet decrytpering - ecdca7da6ad51315a0324ee68353d8b3.pem
+#77580531f75476b810cd268abaa2b5e8.bin           #funnet decryptering - 2d2762062e20ffffa72e58a8ac86b493.pem
+#d091feff5489487de36fa5089c2c4116.bin           #funnet decryptering - 92d3928a04087cba76bf91161f7a3e73.pem
 # In your Python code you can use something like this
-binfilename = "77580531f75476b810cd268abaa2b5e8"                #Add the name of the .bin file
+binfilename = "063e965fcd26152888ee373dca2b133e"                #Add the name of the .bin file
 file_in = open(binfilename + ".bin", "rb")
 encmsg = file_in.read()
 print("cryptert mld: ", encmsg)
 # then you try to decrypt encmsg it with previously recovered cipher_rsa
 try_decrypted_message = cipher_rsa.decrypt(encmsg)
 print("decrypt mld: : ", try_decrypted_message)
+
 
