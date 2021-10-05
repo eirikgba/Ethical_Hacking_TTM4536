@@ -71,6 +71,10 @@ Where
 p = Next_Prime(2^54)
 
 # Flag05
+Redirect the webpage til en annnen side
+```
+http://129.241.200.165:19680/index.php?page=redirect&site=5650cb0
+```
 
 # Flag06
 Endre page, ved å gå til root og så inn i directory etc og vidre inn i passwd.
