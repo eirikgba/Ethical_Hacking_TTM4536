@@ -163,7 +163,7 @@ https://onlinehextools.com/xor-hex-numbers
 
 # Flag11
 
-# Flag12
+# Flag12 - image upload
 ```
 #!/usr/bin/env python3
 
