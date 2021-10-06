@@ -104,6 +104,10 @@ satoshi 65558: 22c9b7866d7424dc4b90a03664f5136c966fb34c8edd751cfba6998fe2b5170f
 inspect element
 
 document.cookie
+
+https://www.blockchain.com/btc/block/65558
+
+endre cookie til 000000000a7dce5ac40e7a88fd61399bbe76da161c1d65cbc2ebf2bd364545ed
 ```
 
 # Flag10
