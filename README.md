@@ -117,6 +117,10 @@ endre cookie til 000000000a7dce5ac40e7a88fd61399bbe76da161c1d65cbc2ebf2bd364545e
 # Flag12
 
 # Flag13
+Congratulations Flag13 is 6bad301f529ea136b3427e9daf2e6b2e
+```
+http://129.241.200.165:19680/test.php
+```
 
 # Flag14
 
