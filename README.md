@@ -11,13 +11,13 @@ Flags:
 5. [x] Redirect (trenger flag04)
 6. [x] Paths
 7. [x] Hidden
-8. [] Whatever
+8. [ ] Whatever
 9. [x] Cookies/oreo
 10. [x] Members
 11. [x] Image
-12. [] Image2
+12. [ ] Image2
 13. [x] Silly
-14. [] nsa2
+14. [ ] nsa2
 
 
 Darkly writeups github:
