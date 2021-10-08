@@ -4,19 +4,19 @@ Repo for all code som blir brukt i faget, og spesielt i forhold til flag og Dark
 
 
 Flags:
-1. [] Bruteforce
-2. [] Passord-recovery
-3. [] Albatros-flag? nsa?
-4. [] Survey (trenger flag03)
-5. [] Redirect (trenger flag04)
-6. [] Paths
-7. [] Hidden
+1. [x] Bruteforce
+2. [x] Passord-recovery
+3. [x] Albatros-flag? nsa?
+4. [x] Survey (trenger flag03)
+5. [x] Redirect (trenger flag04)
+6. [x] Paths
+7. [x] Hidden
 8. [] Whatever
-9. [] Cookies/oreo
-10. [] Members
-11. [] Image
+9. [x] Cookies/oreo
+10. [x] Members
+11. [x] Image
 12. [] Image2
-13. [] Silly
+13. [x] Silly
 14. [] nsa2
 
 
