@@ -223,11 +223,8 @@ open unmerged.png
 
 
 # Flag12 - image upload
-http://129.241.200.165:19680/?page=upload# 
+The flag 12 is : e6c8265958ea4c13558df233e66117a7
 
-Nice try but should be the image name extracted from SEARCH IMAGE attack
-		saepe ?
-		3d8e5368ff73ab88cdccd05a07e1e19e.bin ?
 
 ```
 #!/usr/bin/env python3
@@ -238,7 +235,7 @@ url = 'http://129.241.200.165:19680/?page=upload'
 
 f = {
         'uploaded':                                 # .. from <form> element in html
-            ("<script>alert('xss')</script>",       # file name
+            ("drown.png",       # file name
                 'file_contents',                    # actual file contents, normaly `open(fn, 'rb')`
                 'image/jpeg')                       # content-type
         }
