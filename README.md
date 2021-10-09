@@ -15,7 +15,7 @@ Flags:
 9. [x] Cookies/oreo
 10. [x] Members
 11. [x] Image
-12. [ ] Image2
+12. [x] Image2
 13. [x] Silly
 14. [ ] nsa2
 
