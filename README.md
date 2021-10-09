@@ -30,7 +30,7 @@ Darkly writeups github:
 
 
 # Bruteforce/Flag01
-
+THE FLAG 01 IS : 61C08546B939E55C32A8CA914EB92378
 
 Lagde et script som kjørte 2 for løkker. Begge løkkene gikkgjennom alle passordene i filen (xato.....) og i den inerste løkken skrev den ut passordene i et passord. Så alle passordene i filen ble satt sammen med alle passordene inkludert seg selv. Det endte totalt med 998001 passord grunnet at det var 999 passord i filen siden et av passordene var blankt som scriptet ikke tok med.
 
@@ -38,6 +38,8 @@ Etter det kjørte jeg det default scriptet med noen små justeringer og fikk ut 
 
 
 # Flag02 - Passord recovery
+THE FLAG 02 IS : 1E9FE7EE4CA5BA232C093AC95B732EEE
+
 Editerte html coden:
 Ved å legge inn eget e-post i value i stede for den som lå der orginalt
 ```
@@ -49,11 +51,16 @@ Ved å legge inn eget e-post i value i stede for den som lå der orginalt
 
 
 # Flag03 - Albatros/NSA flag
+The flag 03 is : a343c8f25244f4661e641ffe7e36694a
+
 ``` 
-curl -A "61c08546b939" -e "https://www.nsa.gov/" http://129.241.200.165:19680/index.php?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c
+curl -A "61c08546b939" -e "https://www.nsa.gov/" http://129.241.200.165:19680/index.php?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c | grep 'flag'
 ```
 
 # Flag04 - Survey
+THE FLAG 04 IS 5650CB0D8AB2BF52430F6929229BA459
+
+
 ```
 http://129.241.200.165:19680/?page=survey
 <form action="#" method="post">
@@ -80,6 +87,7 @@ Where
 p = Next_Prime(2^54)
 
 # Flag05
+FLAG 05: 137DDB469EFEB8309B53FF95A8991974
 
 Redirect the webpage til en annnen side
 ```
@@ -87,6 +95,8 @@ http://129.241.200.165:19680/index.php?page=redirect&site=5650cb0
 ```
 
 # Flag06
+Flag05: 1cb82fec6d8479a822bad55e0824918e
+
 Endre page, ved å gå til root og så inn i directory etc og vidre inn i passwd.
 Hentet opp deller av flagget når en går bakover i fil systemet og det siste ligger i etc/passwd
 ```
@@ -121,6 +131,8 @@ http://129.241.200.165:19680/admin/index.php
 
 
 # Flag09 - cookie
+Flag 09: 07580b873bc9eb153f4f346c415421e1
+
 satoshi 65558: 22c9b7866d7424dc4b90a03664f5136c966fb34c8edd751cfba6998fe2b5170f
 ```
 inspect element
