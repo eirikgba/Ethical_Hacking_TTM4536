@@ -225,6 +225,13 @@ http://129.241.200.165:19680/index.php?page=download
 
 ### KALI VM - steganography
 ```
+binwalk -e index.php	#binwalk -Mre index.php
+cd _index.php.extracted
+
+#åpne zip filen også inne i den ligger drown.png passord beskyttet. passord er 16 leftmost char of Flag09: 07580b873bc9eb15
+
+open drown.png
+
 git clone https://github.com/raffg/steganography.git
 cd steganography
 
