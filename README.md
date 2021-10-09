@@ -17,7 +17,7 @@ Flags:
 11. [x] Image
 12. [x] Image2
 13. [x] Silly
-14. [ ] nsa2
+14. [x] nsa2
 
 
 Darkly writeups github:
@@ -30,6 +30,7 @@ Darkly writeups github:
 
 
 # Bruteforce/Flag01
+
 
 Lagde et script som kjørte 2 for løkker. Begge løkkene gikkgjennom alle passordene i filen (xato.....) og i den inerste løkken skrev den ut passordene i et passord. Så alle passordene i filen ble satt sammen med alle passordene inkludert seg selv. Det endte totalt med 998001 passord grunnet at det var 999 passord i filen siden et av passordene var blankt som scriptet ikke tok med.
 
@@ -79,6 +80,7 @@ Where
 p = Next_Prime(2^54)
 
 # Flag05
+
 Redirect the webpage til en annnen side
 ```
 http://129.241.200.165:19680/index.php?page=redirect&site=5650cb0
@@ -94,6 +96,7 @@ http://129.241.200.165:19680/index.php?page=../../../../../../../etc/passwd
 
 # Flag07
 Flag07: dbfa4f7c46dc570fcd4b71272cdd2f2c
+
 First tok jeg ut alle README filene
 ``` 
 wget -m -r -nd -A "*README*" http://129.241.200.165:19680//.hidden/ 
@@ -105,6 +108,7 @@ explorer.exe .			#åpner directory i file explorer windows
 ```
 
 # Flag08
+
 
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890
 http://129.241.200.165:19680/whatever/
@@ -260,6 +264,9 @@ Tror dette kan også gjøres ved xss på http://129.241.200.165:19680/index.php?
 THE FLAG 14 IS : A7DCADB231D434C43082783B0983AB74
 
 http://129.241.200.165:19680/?page=media&src=nsa
+
+brukte nettside for base64 encoding:
+	https://www.base64encode.org/
 
 ```
 edit:
