@@ -120,6 +120,22 @@ explorer.exe .			#åpner directory i file explorer windows
 
 # Flag08
 ### Flag08
+https://www.geeksforgeeks.org/python-itertools-combinations-function/
+		```
+		# Combinations Of string "GeEKS" OF SIZE 3.
+  
+  
+		from itertools import combinations
+  
+		letters ="GeEKS"
+  
+		# size of combination is set to 3
+		a = combinations(letters, 3) 
+		y = [' '.join(i) for i in a]
+  
+		print(y)
+		```
+https://docs.python.org/3/library/fnmatch.html
 
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890
 http://129.241.200.165:19680/whatever/
