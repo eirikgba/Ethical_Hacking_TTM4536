@@ -12,7 +12,7 @@ Flags:
 5. [x] Redirect (trenger flag04)
 6. [x] Paths
 7. [x] Hidden
-8. [ ] Whatever
+8. [x] Whatever
 9. [x] Cookies/oreo
 10. [x] Members ????
 11. [x] Image
@@ -119,7 +119,63 @@ explorer.exe .			#åpner directory i file explorer windows
 ```
 
 # Flag08
-### Flag08
+### The Flag08 is : c530c4bd9ed6ee5c610d6d612961adf8
+user: 		root
+passwd: 	eirikgbadltwyzO
+
+```
+import hashlib
+import itertools
+from itertools import combinations
+import string
+import os
+import fnmatch
+
+
+i = 0
+#chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+char = list(string.ascii_letters + string.digits)
+right = "*2cdd2f2c"
+f = open("flag08passord.txt", "a")
+add = "test"
+test_string ="test"
+#f.write("Now the file has more content!")
+#f.close()
+
+print(char)
+test = []
+
+string = "eirikgba"
+encoded=string.encode()
+result = hashlib.sha256(encoded)
+print("String : ", end ="")
+print(string)
+print("encoded: ", encoded)
+print("Hash Value : ", end ="")
+print(result)
+print("Hexadecimal equivalent: ",result.hexdigest())
+print("Digest Size : ", end ="")
+print(result.digest_size)
+print("Block Size : ", end ="")
+print(result.block_size)
+
+
+for i in range(0, len(char)+1):
+    for subset in itertools.combinations(char, i):
+        #print(subset)
+        test.append(string + ''.join(subset))
+        test_string = string + ''.join(subset)
+        #print(test_string)
+        encoded = test_string.encode()
+        result = hashlib.sha256(encoded)
+        if fnmatch.fnmatch(result.hexdigest(), right):
+            print("this is the one: ", string)
+
+
+f.close()
+print("finish")
+```
+
 https://www.geeksforgeeks.org/python-itertools-combinations-function/
 		```
 		# Combinations Of string "GeEKS" OF SIZE 3.
