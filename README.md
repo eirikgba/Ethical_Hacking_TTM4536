@@ -5,20 +5,20 @@ Repo for all code som blir brukt i faget, og spesielt i forhold til flag og Dark
 
 
 Flags:
-1. [x] Bruteforce
-2. [x] Passord-recovery
-3. [x] Albatros-flag? nsa?
-4. [x] Survey (trenger flag03)
-5. [x] Redirect (trenger flag04)
-6. [x] Paths
-7. [x] Hidden
-8. [x] Whatever
-9. [x] Cookies/oreo
-10. [x] Members ????
-11. [x] Image
-12. [x] Image2
-13. [x] Silly
-14. [x] nsa2
+- [x] Bruteforce
+- [x] Passord-recovery
+- [x] Albatros-flag? nsa?
+- [x] Survey (trenger flag03)
+- [x] Redirect (trenger flag04)
+- [x] Paths
+- [x] Hidden
+- [x] Whatever
+- [x] Cookies/oreo
+- [x] Members ????
+- [x] Image
+- [x] Image2
+- [x] Silly
+- [x] nsa2
 
 
 Darkly writeups github:
