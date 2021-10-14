@@ -1,5 +1,7 @@
 # Assigment 4
 
+Hallo. Your f1a9 is: 54861a8388dc84c4ed764da014cddc58
+
 run communicationXX.pcap i WireShark
 search for eirikgba
 
