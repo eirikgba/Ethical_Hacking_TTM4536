@@ -60,7 +60,15 @@ curl -A "61c08546b939" -e "https://www.nsa.gov/" http://129.241.200.165:19680/in
 
 # Flag04 - Survey
 ### THE FLAG 04 IS 5650CB0D8AB2BF52430F6929229BA459
+https://www.alpertron.com.ar/DILOG.HTM
 
+2^Grade mod p = Flag03 mod 2^64
+Where
+p = Next_Prime(2^64)
+
+Base: 2
+Power: 2189910496708553034 		(right/høyere side)
+Modulus: 18446744073709551629 	(p - det som blir Modulus på)
 
 ```
 http://129.241.200.165:19680/?page=survey
@@ -76,16 +84,13 @@ http://129.241.200.165:19680/?page=survey
 						<option value="7">7</option>
 						<option value="8">8</option>
 						<option value="9">9</option>
-						<option value="999999">10</option>
+						<option value="">10</option>
 					</select>
 				</form>
 
 ```
-Change the value of one of the Grades
 
-2^Grade mod p = FLAG03 mod 2^64,
-Where
-p = Next_Prime(2^54)
+
 
 # Flag05
 ### FLAG 05: 137DDB469EFEB8309B53FF95A8991974
