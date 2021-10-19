@@ -70,6 +70,9 @@ Base: 2
 Power: 2189910496708553034 		(right/høyere side)
 Modulus: 18446744073709551629 	(p - det som blir Modulus på)
 
+Grade = exp = 16 118344 319597 295151 + 18 446744 073709 551628k
+Grade = 34565088393306846779
+
 ```
 http://129.241.200.165:19680/?page=survey
 <form action="#" method="post">
