@@ -1,5 +1,12 @@
 # EDIT ISO FILE
 
+### Nyttige filer
+- https://www.unixmen.com/edit-iso-files-using-mkisofs-in-linux/
+- https://sleeplessbeastie.eu/2012/05/27/how-to-modify-squashfs-image/
+ 
+LEMP
+- https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-12-04
+
 ## Edit Password on iso
 Gjorde alt på KAli VM
 
