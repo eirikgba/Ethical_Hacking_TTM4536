@@ -7,6 +7,13 @@
 LEMP
 - https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-12-04
 
+Apt-get
+- https://gist.github.com/dergachev/f5da514802fcbbb441a1
+    - fiksen for at apt-get skal fungere: 
+        - sudo sed -i.bak -r 's/(archive|security).ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+ 
+
+
 ## Edit Password on iso
 Gjorde alt på KAli VM
 
@@ -14,6 +21,7 @@ Gjorde alt på KAli VM
 #edit passowrd (passord1), bare midlertidig i ISO-FILE
 passwd
 ```
+[endre noe på koden og rekkefølge? tror mounten som er gjort senere er bedre enn den som er gjort tilslutt]
 
 montere ISO-FILE
 
@@ -34,7 +42,8 @@ unsquashfs filesystem.squashfs
 
 
 ```
-docker 
+### docker
+starte og legge til filer 
 ```
 #starte docker container ubuntu:12.04
 docker run -i -t ubuntu:12.04 /bin/bash
