@@ -1,5 +1,4 @@
 
-
 ## Starte og kjøre docker container
 ```
 #bare første gang
@@ -59,6 +58,10 @@ unsquashfs filesystem.squashfs                          #evt annet navn
 #################               Nå kan en begyne å gjøre endinger                  #################
 ####################################################################################################
 
+
+####################################################################################################
+#################                       Endre root passord                         #################
+####################################################################################################
 #endre root passord
 passwd
 #skriv inn passord
@@ -68,6 +71,9 @@ cp /etc/passwd /path/for/kopi/av/mount/etc/passwd             #root/etc/passwd
 cp /etc/shadow /path/for/kopi/av/mount/etc/shadow             #root/etc/shadow
 #hvis dette ikke fungerer må en kopiere alle mountede filer til en annen dir fordi de er skrive beskyttet 
 
+####################################################################################################
+#################                       Endre *                                    #################
+####################################################################################################
 ```
 
 ## Create new ISO file
