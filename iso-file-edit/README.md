@@ -11,7 +11,11 @@ Apt-get
 - https://gist.github.com/dergachev/f5da514802fcbbb441a1
     - fiksen for at apt-get skal fungere: 
         - sudo sed -i.bak -r 's/(archive|security).ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
- 
+        - sed -i -e 's/archive.ubuntu.com\|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+apt-get update
+apt-get install squashfs-tool
+apt-get install mkisofs
+
 
 
 ## Edit Password on iso
