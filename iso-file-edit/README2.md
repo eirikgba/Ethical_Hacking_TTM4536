@@ -1,4 +1,3 @@
-
 ## Starte og kjøre docker container
 ```
 #bare første gang
@@ -27,7 +26,7 @@ sed -i.bak -r 's/(archive|security).ubuntu.com/old-releases.ubuntu.com/g' /etc/a
 sed -i -e 's/archive.ubuntu.com|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
 
 apt-get update
-apt-get install squashfs-tool
+apt-get install squashfs-tools
 apt-get install mkisofs
 
 ```
