@@ -29,6 +29,10 @@ apt-get update
 apt-get install squashfs-tools
 apt-get install mkisofs
 
+apt-get install mysql-server php5-mysql
+mysql_install_db
+/usr/bin/mysql_secure_installation
+
 ```
 
 ## Gjøre klar ISO for endringer inne i container
@@ -71,8 +75,41 @@ cp /etc/shadow /path/for/kopi/av/mount/etc/shadow             #root/etc/shadow
 #hvis dette ikke fungerer må en kopiere alle mountede filer til en annen dir fordi de er skrive beskyttet 
 
 ####################################################################################################
-#################                       Endre *                                    #################
+#################                       Endre MySQL                                    #################
 ####################################################################################################
+
+???
+
+mysqld_safe --skip-grant-tables &
+####################    Ved Problemer ? ######################
+#killall mysqld mysqld_safe
+#mysqld_safe --skip-grant-tables --skip-networking &
+
+
+mysql -u root
+
+    use mysql;
+    update user set password=PASSWORD("passord1") where User='root';
+    flush privileges;
+    quit
+
+stop mysql
+start mysql
+
+mysql -u root -p
+    use mysql;
+    update user set password=PASSWORD("passord123") where User='borntosec';
+
+    SELECT host,user,password FROM mysql.user;
+    quit
+
+mysqladmin -u root -p shutdown
+start mysql
+
+
+
+
+#Dummy data for mysql - http://filldb.info/
 ```
 
 ## Create new ISO file
