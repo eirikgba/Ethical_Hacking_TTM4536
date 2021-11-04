@@ -75,7 +75,7 @@ cp /etc/shadow /path/for/kopi/av/mount/etc/shadow             #root/etc/shadow
 #hvis dette ikke fungerer må en kopiere alle mountede filer til en annen dir fordi de er skrive beskyttet 
 
 ####################################################################################################
-#################                       Endre MySQL                                    #################
+#################                       Endre MySQL / LEMP                         #################
 ####################################################################################################
 
 ???
@@ -110,6 +110,8 @@ start mysql
 
 
 #Dummy data for mysql - http://filldb.info/
+
+LEMP - https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-12-04
 ```
 
 ## Create new ISO file
