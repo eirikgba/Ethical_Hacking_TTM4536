@@ -82,12 +82,15 @@ cp /etc/shadow /path/for/kopi/av/mount/etc/shadow             #root/etc/shadow
 
 mysqld_safe --skip-grant-tables &
 ####################    Ved Problemer ? ######################
-#killall mysqld mysqld_safe
-#mysqld_safe --skip-grant-tables --skip-networking &
-
+                #killall mysqld mysqld_safe
+        #mysqld_safe --skip-grant-tables --skip-networking &
+##############################################################
 
 mysql -u root
 
+    SHOW DATABASES;
+    SHOW SCHEMAS;
+    
     use mysql;
     update user set password=PASSWORD("passord1") where User='root';
     flush privileges;
