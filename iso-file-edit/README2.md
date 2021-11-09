@@ -3,6 +3,17 @@
 #bare første gang
 docker run -i -t ubuntu:12.04 /bin/bash
 
+####################################################################
+https://stackoverflow.com/questions/22028795/is-it-possible-to-mount-an-iso-inside-a-docker-container
+mulig løsning for å må mountet inne i docker container
+docker run --privileged -i -t ubuntu:12.04 /bin/bash
+#ELLER
+    mknod /dev/loop0 -m0660 b 7 0
+    mknod /dev/loop1 -m0660 b 7 1
+    ...
+    mknod /dev/loop9 -m0660 b 7 9
+####################################################################
+
 #Kopiere over filer til container
 docker cp <filnavn> <docker_container_navn:/Path/to/file>
 
