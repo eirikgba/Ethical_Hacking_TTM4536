@@ -138,6 +138,7 @@ LEMP - https://www.digitalocean.com/community/tutorials/how-to-install-linux-ngi
 mksquashfs squashfs-root filesystem.squashfs -no-recovery -always-use-fragments -b 1M -no-duplicates -noappend
 
 #pass på å stå i mappe hvor kopi av mounted iso ligger
+cd ..
 mkisofs -o Darkly_i386.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-info-table -J -R -V "Darkly custom ISO" .
 
 #kopiere filen fra docker tilbake til maskin
