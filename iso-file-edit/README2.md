@@ -1,7 +1,7 @@
 ## Starte og kjøre docker container
 ```
-#bare første gang
-docker run -i -t ubuntu:12.04 /bin/bash
+#bare første gang (--privileged = for å kunne mount)
+docker run --privileged -i -t ubuntu:12.04 /bin/bash
 
 ####################################################################
 https://stackoverflow.com/questions/22028795/is-it-possible-to-mount-an-iso-inside-a-docker-container
@@ -37,6 +37,7 @@ sed -i.bak -r 's/(archive|security).ubuntu.com/old-releases.ubuntu.com/g' /etc/a
 sed -i -e 's/archive.ubuntu.com|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
 
 apt-get update
+apt-get install nano
 apt-get install squashfs-tools
 apt-get install mkisofs
 
@@ -56,7 +57,7 @@ mount /path/to/file.iso /Path/to/mounted/files     #(/tmp or /mnt)
 #Må gjøres siden iso mount er skrive beskyttet
 #gå til dir hvor iso er mounted
 tar cf - . | (cd /tmp/custom; tar xfp -)       #
-# mulig forbedring: tar cf – * | tar xfp – -C /target
+# mulig forbedring: tar cf – * | tar xfp – -C /tmp
 
 #gå inn dit hvor kopien ligger
 cd /tmp/custom
