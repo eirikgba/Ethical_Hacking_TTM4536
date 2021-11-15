@@ -34,7 +34,7 @@ setxkbmap no
 #install ting som trengs
 #trenger bare en av disse for å få instalert på (gammelt) ubuntu 12.04
 sed -i.bak -r 's/(archive|security).ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
-sed -i -e 's/archive.ubuntu.com|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+#sed -i -e 's/archive.ubuntu.com|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
 
 apt-get update
 apt-get install nano
@@ -56,11 +56,11 @@ mount /path/to/file.iso /Path/to/mounted/files     #(/tmp or /mnt)
 
 #Må gjøres siden iso mount er skrive beskyttet
 #gå til dir hvor iso er mounted
-tar cf - . | (cd /tmp/custom; tar xfp -)       #
+tar cf - . | (cd /tmp/; tar xfp -)
 # mulig forbedring: tar cf – * | tar xfp – -C /tmp
 
 #gå inn dit hvor kopien ligger
-cd /tmp/custom
+cd /tmp/
 #find the squashfs file 
 find */*.squashfs                                       #tror det skal fungere evt sjekke manuelt
 
@@ -89,6 +89,10 @@ cp /etc/shadow /path/for/kopi/av/mount/etc/shadow             #root/etc/shadow
 ####################################################################################################
 #################                       Endre MySQL / LEMP                         #################
 ####################################################################################################
+apt-get update
+apt-get install mysql-server php5-mysql
+mysql_install_db
+/usr/bin/mysql_secure_installation
 
 ???
 
