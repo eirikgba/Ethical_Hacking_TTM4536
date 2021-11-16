@@ -92,6 +92,7 @@ cp /etc/shadow /path/for/kopi/av/mount/etc/shadow             #root/etc/shadow
 apt-get update
 apt-get install mysql-server php5-mysql
 mysql_install_db
+mysqld_safe --skip-grant-tables &
 /usr/bin/mysql_secure_installation
 
 ???
