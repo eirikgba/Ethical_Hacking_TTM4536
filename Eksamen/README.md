@@ -1,5 +1,4 @@
 
-
 ## Creating the docker container ++
 ```
 docker create -i -t --privileged --name eksamen ubuntu:12.04 /bin/bash
@@ -23,6 +22,32 @@ apt-get install mkisofs
 apt-get install mysql-server php5-mysql
     #input password
 mysql_install_db
+            #output:
+                    To start mysqld at boot time you have to copy
+                    support-files/mysql.server to the right place for your system
+
+                    PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !
+                    To do so, start the server, then issue the following commands:
+
+                    /usr/bin/mysqladmin -u root password 'new-password'
+                    /usr/bin/mysqladmin -u root -h 3e2468028e8c password 'new-password'
+
+                    Alternatively you can run:
+                    /usr/bin/mysql_secure_installation
+
+                    which will also give you the option of removing the test
+                    databases and anonymous user created by default.  This is
+                    strongly recommended for production servers.
+
+                    See the manual for more instructions.
+
+                    You can start the MySQL daemon with:
+                    cd /usr ; /usr/bin/mysqld_safe &
+
+                    You can test the MySQL daemon with mysql-test-run.pl
+                    cd /usr/mysql-test ; perl mysql-test-run.pl
+
+                    Please report any problems at http://bugs.mysql.com/
     #Kjøre en av disse?   
     mysqld_safe --skip-grant-table &
     /usr/sbin/mysqld &
@@ -62,6 +87,8 @@ mysqld_safe --skip-grant-table &
 ```
 
 #### Edit the SQL
+
+###### for å kjøre MySQL demon: /usr/sbin/mysqld &
 ```
 #make backup of the mysql dir
 cp -r /var/lib/mysql /var/lib/mysql-backup
