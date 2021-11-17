@@ -163,6 +163,40 @@ service mysql start
 ```
 
 
+## 1 Edit the root passwd
+```
+passwd
+#type new password
+
+cp /etc/passwd /root/squashfs-root/etc/passwd
+cp /etc/shadow /root/squashfs-root/etc/shadow
+```
+
+
+## 2 Edit the ascii
+```
+cd /root/squashfs-root/etc/
+nano issue
+    #put inn the new ascii art
+```
+
+## 3 Edit the boot images
+```
+cd /tmp/isolinux
+    #EDIT THE SPLASH.PNG image 
+
+    #use image magic or other tool to change the image in cli
+        https://imagemagick.org/
+
+```
+
+## 4 Edit the web page
+```
+cd /squashfs-root/var/www/html/
+nano index.php5
+
+```
+
 ## Slå alt sammen 
 ```
 cd /root
