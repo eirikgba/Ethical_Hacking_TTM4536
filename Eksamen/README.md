@@ -1,4 +1,3 @@
-
 ## Creating the docker container ++
 ```
 docker create -i -t --privileged --name eksamen ubuntu:12.04 /bin/bash
@@ -164,5 +163,25 @@ service mysql start
 ```
 
 
+## Slå alt sammen 
+```
+cd /root
+mksquashfs squashfs-root/ filesystem.squashfs -no-recovery -always-use-fragments -b 1M -no-duplicates -noappend
+
+cp filesystem.squashfs /tmp/casper/filesystem.squashfs
 
 
+cd /tmp/
+ls
+ls -l casper/
+ls -l isolinux/
+
+mkisofs -o Eksamen_ascii_edit3.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-info-table -J -R -V "Eksamen edit ascii ISO" .
+```
+
+## Ta det ut og test
+```
+docker cp eksamen2:/tmp/Eksamen_ascii_edit2.iso .
+```
+
+Kjøre opp en nye VM med den nye iso filen
