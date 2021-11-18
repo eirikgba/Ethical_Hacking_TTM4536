@@ -1,6 +1,6 @@
 ## Creating the docker container ++
 ```
-docker create -i -t --privileged --name eksamen ubuntu:12.04 /bin/bash
+docker create -i -t --privileged --name eksamen3 ubuntu:12.04 /bin/bash
 docker cp <FILENAME.iso> eksamen:/home
 docker start -i eksamen
 ```
@@ -173,14 +173,7 @@ cp /etc/shadow /root/squashfs-root/etc/shadow
 ```
 
 
-## 2 Edit the ascii
-```
-cd /root/squashfs-root/etc/
-nano issue
-    #put inn the new ascii art
-```
-
-## 3 Edit the boot images
+## 2 Edit the boot images
 ```
 cd /tmp/isolinux
     #EDIT THE SPLASH.PNG image 
@@ -188,6 +181,28 @@ cd /tmp/isolinux
     #use image magic or other tool to change the image in cli
         https://imagemagick.org/
 
+#####################################################################
+cd /tmp/isolinux
+mkdir /picture
+cp splash.png /picture/splash-org.png
+cd /picture
+identify -ping splash-org.png
+    #output the atributes
+convert splash.png -alpha extract -threshold 0 blank.png
+    #removes the text
+    #convert -size 640x480 -background red -fill black -pointsize 64 -gravity Center label:'eirikgba@stud.ntnu.no \n HACKED THIS COMPUTERl!!!!'  splash.png
+convert blank.png -size 640x480 -background red -fill black -pointsize 44 -gravity Center label:'eirikgba@stud.ntnu.no \n HACKED THIS MACHINE!!!!' splash-finale.png
+    #makes the new image with the correct text adn size
+
+
+```
+
+
+## 3 Edit the ascii
+```
+cd /root/squashfs-root/etc/
+nano issue
+    #put inn the new ascii art
 ```
 
 ## 4 Edit the web page
@@ -210,7 +225,7 @@ ls
 ls -l casper/
 ls -l isolinux/
 
-mkisofs -o Eksamen_ascii_edit3.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-info-table -J -R -V "Eksamen edit ascii ISO" .
+mkisofs -o 1480eirikgba@stud.ntnu.no-edit.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-info-table -J -R -V "Eksamen edited ISO" .
 ```
 
 ## Ta det ut og test
