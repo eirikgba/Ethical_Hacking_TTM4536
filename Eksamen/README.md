@@ -180,6 +180,7 @@ cd /tmp/isolinux
 
     #use image magic or other tool to change the image in cli
         https://imagemagick.org/
+        https://legacy.imagemagick.org/Usage/text/
 
 #####################################################################
 cd /tmp/isolinux
