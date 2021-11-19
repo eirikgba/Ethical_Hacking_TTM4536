@@ -226,7 +226,7 @@ ls
 ls -l casper/
 ls -l isolinux/
 
-mkisofs -o 1480eirikgba@stud.ntnu.no-edit.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-info-table -J -R -V "Eksamen edited ISO" .
+mkisofs -o /home/1480eirikgba@stud.ntnu.no-edit.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-info-table -J -R -V "Eksamen edited ISO" .
 ```
 
 ## Ta det ut og test
